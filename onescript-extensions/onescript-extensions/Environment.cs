@@ -39,6 +39,9 @@ namespace onescript_extensions
 
         /// <summary>
         /// Возвращает число процессоров.
+        /// 32-битовое целое число со знаком, которое возвращает количество процессоров на текущем компьютере. 
+        /// Значение по умолчанию отсутствует. Если текущий компьютер содержит несколько групп процессоров, 
+        /// данное свойство возвращает число логических процессоров, доступных для использования средой CLR
         /// </summary>
         [ContextProperty("КоличествоПроцессоров")]
         public int ProcessorCount
@@ -83,12 +86,24 @@ namespace onescript_extensions
             }
         }
 
-        
-        //[ContextMethod("ПолучитьПутьПапки")]
-        //public string GetFolderPath(IValue folder)
-        //{
-        //       return "";
-        //}
+        /// <summary>
+        /// Список специальных папок
+        /// </summary>
+        [ContextProperty("СпециальнаяПапка")]
+        public IValue SpecialFolder
+        {
+            get
+            {
+                return new SpecialFolder();
+            }
+        }
+
+
+        [ContextMethod("ПолучитьПутьПапки")]
+        public string GetFolderPath(IValue folder)
+        {
+            return System.Environment.GetFolderPath((System.Environment.SpecialFolder)folder.AsNumber());
+        }
 
         /// <summary>
         /// Возвращает массив строк, содержащий имена логических дисков текущего компьютера.

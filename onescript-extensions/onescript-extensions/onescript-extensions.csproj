@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DriveInfo.cs" />
+    <Compile Include="Interactive.cs" />
     <Compile Include="SpecialFolder.cs" />
     <Compile Include="Environment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

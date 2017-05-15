@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace onescript_extensions
+namespace onescript_extensions.DriveInfo
 {
     [ContextClass("ИнформацияОДиске", "DriveInfo")]
     class DriveInfo : AutoContext<DriveInfo>
     {
         private System.IO.DriveInfo _driveInfo;
+
         public DriveInfo(string driveName)
         {
             _driveInfo = new System.IO.DriveInfo(driveName);
@@ -44,10 +45,9 @@ namespace onescript_extensions
         }
 
         [ContextProperty("ТипДиска")]
-        public IValue DriveType
+        public int DriveType
         {
-            get { return null//_driveInfo.DriveType
-                    ; }
+            get { return (int)_driveInfo.DriveType ; }
         }
 
         /// <summary>

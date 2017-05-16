@@ -46,7 +46,7 @@ after_build:
     
     md "c:\ProgramFiles(x86)\OneScript\lib\extensions\bin\"
 
-    copy "C:/projects/onescript-extensions/extensions/*.*" "c:\ProgramFiles(x86)\OneScript\lib\"
+    oscript.exe C:/projects/onescript-extensions/install.os
 
 
     copy onescript-extensions\src\bin\Debug\onescript-extensions.dll "%ProgramFiles(x86)%\OneScript\lib\extensions\bin\"

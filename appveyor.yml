@@ -33,7 +33,6 @@ after_build:
 # Указывать по маске *.dll не стоит, потому что тут же лежат
 # библиотеки из NuGet - ОдноСкрипт и все зависимости
 - cmd: >-
-    opm install 1testrunner
     1testrunner -runall c:\work\github\onescript-extensions/tests
 
 # artifacts:

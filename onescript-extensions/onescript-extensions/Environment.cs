@@ -118,7 +118,5 @@ namespace onescript_extensions
             }
         }
 
-        
-
     }
 }

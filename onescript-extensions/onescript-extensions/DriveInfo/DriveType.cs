@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace onescript_extensions.DriveInfo
 {
-    [ContextClass("ИнформацияОДиске", "DriveInfo")]
+    [ContextClass("ТипДиска", "DriveType")]
     class DriveType : AutoContext<DriveType>
     {
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace onescript_extensions.DriveInfo
 {
     [ContextClass("ИнформацияОДиске", "DriveInfo")]
-    class DriveInfo : AutoContext<DriveInfo>
+    public class DriveInfo : AutoContext<DriveInfo>
     {
         private System.IO.DriveInfo _driveInfo;
 
@@ -20,9 +20,9 @@ namespace onescript_extensions.DriveInfo
         }
 
         [ScriptConstructor]
-        public static IRuntimeContextInstance Constructor(string driveName)
+        public static IRuntimeContextInstance Constructor(IValue driveName)
         {
-            return new DriveInfo(driveName);
+            return new DriveInfo(driveName.AsString());
         }
 
 

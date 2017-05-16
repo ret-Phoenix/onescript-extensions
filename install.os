@@ -1,0 +1,2 @@
+КопироватьФайл("C:/projects/onescript-extensions/extensions", "c:/ProgramFiles(x86)/OneScript/lib/");
+КопироватьФайл("onescript-extensions\src\bin\Debug\onescript-extensions.dll", "c:/ProgramFiles(x86)/OneScript/lib/extensions\bin\");

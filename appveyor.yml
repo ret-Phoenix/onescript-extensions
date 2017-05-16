@@ -46,6 +46,8 @@ after_build:
 
     copy C:/projects/onescript-extensions/extensions "%ProgramFiles(x86)%\OneScript\lib\"
 
+    md "%ProgramFiles(x86)%\OneScript\lib\extensions\bin\"
+
     copy onescript-extensions\src\bin\Debug\onescript-extensions.dll "%ProgramFiles(x86)%\OneScript\lib\extensions\bin\"
 
 

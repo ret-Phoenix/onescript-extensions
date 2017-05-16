@@ -48,10 +48,6 @@ after_build:
 
     oscript.exe C:/projects/onescript-extensions/install.os
 
-
-    copy onescript-extensions\src\bin\Debug\onescript-extensions.dll "%ProgramFiles(x86)%\OneScript\lib\extensions\bin\"
-
-
     1testrunner -runall C:/projects/onescript-extensions/tests
 
 # artifacts:

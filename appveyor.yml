@@ -44,9 +44,9 @@ after_build:
 
     opm install 1testrunner
 
-    copy C:/projects/onescript-extensions/extensions "%ProgramFiles(x86)%\OneScript\lib\"
+    copy C:/projects/onescript-extensions/extensions "c:\ProgramFiles(x86)\OneScript\lib\"
 
-    md "%ProgramFiles(x86)%\OneScript\lib\extensions\bin\"
+    md "c:\ProgramFiles(x86)\OneScript\lib\extensions\bin\"
 
     copy onescript-extensions\src\bin\Debug\onescript-extensions.dll "%ProgramFiles(x86)%\OneScript\lib\extensions\bin\"
 

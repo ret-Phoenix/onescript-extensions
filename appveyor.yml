@@ -35,7 +35,7 @@ after_build:
 # Указывать по маске *.dll не стоит, потому что тут же лежат
 # библиотеки из NuGet - ОдноСкрипт и все зависимости
 - cmd: >-
-    1testrunner -runall C:/projects/onescript-extensions/tests
+    1testrunner.bat -runall C:/projects/onescript-extensions/tests
 
 # artifacts:
 # - path: oslib\*.ospx

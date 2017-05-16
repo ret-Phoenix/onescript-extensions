@@ -35,6 +35,15 @@ after_build:
 # Указывать по маске *.dll не стоит, потому что тут же лежат
 # библиотеки из NuGet - ОдноСкрипт и все зависимости
 - cmd: >-
+
+    set PATH=%ProgramFiles(x86)%\OneScript\bin;%PATH%
+
+    cd ..
+
+    oscript -version
+
+    opm install opm
+    
     1testrunner.bat -runall C:/projects/onescript-extensions/tests
 
 # artifacts:

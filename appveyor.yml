@@ -42,9 +42,9 @@ after_build:
 
     oscript -version
 
-    opm install opm
-    
-    1testrunner.bat -runall C:/projects/onescript-extensions/tests
+    opm install 1testrunner
+
+    1testrunner -runall C:/projects/onescript-extensions/tests
 
 # artifacts:
 # - path: oslib\*.ospx

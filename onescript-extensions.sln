@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onescript-extensions", "onescript-extensions\onescript-extensions\onescript-extensions.csproj", "{0CEB0C02-30C3-4305-8E6D-9C612971167E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onescript-extensions", "onescript-extensions\src\onescript-extensions.csproj", "{0CEB0C02-30C3-4305-8E6D-9C612971167E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

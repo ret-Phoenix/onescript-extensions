@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyReflector\AssemblyReflector.cs" />
+    <Compile Include="AssemblyReflector\AssemblyType.cs" />
     <Compile Include="DriveInfo\DriveInfo.cs" />
     <Compile Include="DriveInfo\DriveType.cs" />
     <Compile Include="Interactive.cs" />

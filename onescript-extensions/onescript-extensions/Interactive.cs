@@ -15,6 +15,12 @@ namespace onescript_extensions
     class Interactive : AutoContext<Interactive>
     {
 
+        [ScriptConstructor]
+        public static IRuntimeContextInstance Constructor()
+        {
+            return new Interactive();
+        }
+
         [ContextMethod("Сигнал")]
         public void Beep()
         {

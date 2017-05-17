@@ -12,8 +12,14 @@ using System.Threading.Tasks;
 namespace onescript_extensions
 {
     [ContextClass("Интерактивность", "Interactive")]
-    class Interactive : AutoContext<Interactive>
+    public class Interactive : AutoContext<Interactive>
     {
+
+        [ScriptConstructor]
+        public static IRuntimeContextInstance Constructor()
+        {
+            return new Interactive();
+        }
 
         [ContextMethod("Сигнал")]
         public void Beep()

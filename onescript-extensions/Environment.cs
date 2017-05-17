@@ -8,6 +8,11 @@ namespace onescript_extensions
     public class Environment : AutoContext<Environment>
     {
 
+        public Environment()
+        {
+            
+        }
+
         [ScriptConstructor]
         public static IRuntimeContextInstance Constructor()
         {

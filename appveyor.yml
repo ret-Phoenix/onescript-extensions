@@ -23,33 +23,24 @@ install:
 
     opm install opm
 
-    
-
 build:
   verbosity: minimal
-# test_script:
-# - ps: nunit3-console --x86 NUnitTests\bin\Debug\NUnitTests.dll
+test_script:
+- ps: nunit3-console --x86 NUnitTests\bin\Debug\NUnitTests.dll
 
 after_build:
 # Если в компоненте несколько DLL, нужно указать каждую.
 # Указывать по маске *.dll не стоит, потому что тут же лежат
 # библиотеки из NuGet - ОдноСкрипт и все зависимости
 - cmd: >-
+    copy oscript-component\bin\Debug\oscript-component.dll oslib\bin\
 
-    set PATH=%ProgramFiles(x86)%\OneScript\bin;%PATH%
+    cd oslib
+
+    opm build .
 
     cd ..
 
-    oscript -version
-
-    opm install 1testrunner
-    
-    md "c:\ProgramFiles(x86)\OneScript\lib\extensions\bin\"
-
-    oscript.exe C:/projects/onescript-extensions/install.os
-
-    1testrunner -runall C:/projects/onescript-extensions/tests
-
-# artifacts:
-# - path: oslib\*.ospx
-#   name: component
+artifacts:
+- path: oslib\*.ospx
+  name: component

@@ -16,7 +16,7 @@
             "args": [
                  "1testrunner",
                 "-runall",
-                "${workspaceRoot}/tests"
+                "${workspaceRoot}/NUnitTests/tests"
             ],
             "echoCommand": true,
             "showOutput": "always",

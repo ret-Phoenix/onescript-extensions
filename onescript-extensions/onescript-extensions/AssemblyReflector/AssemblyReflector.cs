@@ -31,28 +31,7 @@ namespace onescript_extensions.AssemblyReflector
         [ContextMethod("ЗагрузитьСборку")]
         public void LoadAssembly(IValue asm)
         {
-            //HostedScriptEngine engine;
-            //engine = new HostedScriptEngine();
-            //engine.Initialize();
-            //engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(Object)));
-            //_asm = Assembly.Load(asm.AsString());
-            //_asm = Assembly.ReflectionOnlyLoad(asm.AsString());
-            //AssemblyBuilder sd = new AssemblyBuilder();
-            //sd.GetExportedTypes
-
-            //AssemblyName aName = new AssemblyName(asm.AsString());
-            //AssemblyBuilder ab =
-            //    AppDomain.CurrentDomain.DefineDynamicAssembly(
-            //        aName,
-            //        AssemblyBuilderAccess.RunAndSave);
-
-            AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += new ResolveEventHandler(CurrentDomain_ReflectionOnlyAssemblyResolve);
-            Assembly assembly = Assembly.ReflectionOnlyLoad(asm.AsString());
-            foreach (Type t in assembly.GetTypes())
-            {
-                Console.WriteLine(t.FullName);
-            }
-
+            _asm = Assembly.LoadFrom(asm.AsString());
         }
 
         public Assembly CurrentDomain_ReflectionOnlyAssemblyResolve(object sender, ResolveEventArgs args)

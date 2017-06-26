@@ -39,5 +39,5 @@ after_build:
 artifacts:
 - path: oslib\*.ospx
   name: extensions
-- path: oslib\*.dll
+- path: oslib\bin\*.dll
   name: components

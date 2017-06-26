@@ -7,9 +7,19 @@ init:
 - ps: Restart-Computer
 install:
 - cmd: >-
-    choco install onescript.cli -source https://www.myget.org/F/onescript -y
+    mkdir engine
 
-    refreshenv
+    cd engine
+
+    curl -o os.exe http://oscript.io/downloads/latest/exe
+
+    os.exe /silent
+
+    set PATH=%ProgramFiles(x86)%\OneScript\bin;%PATH%
+
+    cd ..
+
+    oscript -version
 
     opm install opm
 
@@ -18,7 +28,7 @@ build:
 
 after_build:
 - cmd: >-
-    copy onescript-extensions\onescript-extensions\bin\Debug\onescript-extensions.dll oslib\
+    copy onescript-extensions\onescript-extensions\bin\Debug\onescript-extensions.dll oslib\bin\
 
     cd oslib
 

@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onescript-extensions", "onescript-extensions\onescript-extensions\onescript-extensions.csproj", "{0CEB0C02-30C3-4305-8E6D-9C612971167E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drafts", "drafts\drafts.csproj", "{EDCDAC75-7724-4C1C-8E23-F09F78A89806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDCDAC75-7724-4C1C-8E23-F09F78A89806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDCDAC75-7724-4C1C-8E23-F09F78A89806}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDCDAC75-7724-4C1C-8E23-F09F78A89806}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDCDAC75-7724-4C1C-8E23-F09F78A89806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

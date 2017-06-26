@@ -28,7 +28,7 @@ build:
 
 after_build:
 - cmd: >-
-    copy onescript-extensions\onescript-extensions\bin\Debug\onescript-extensions.dll oslib\
+    copy onescript-extensions\onescript-extensions\bin\Debug\onescript-extensions.dll oslib\bin\
 
     cd oslib
 

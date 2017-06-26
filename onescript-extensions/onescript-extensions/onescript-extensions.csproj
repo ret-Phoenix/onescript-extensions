@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +57,7 @@
     <Compile Include="AssemblyReflector\AssemblyMethod.cs" />
     <Compile Include="AssemblyReflector\AssemblyReflector.cs" />
     <Compile Include="AssemblyReflector\AssemblyType.cs" />
-    <Compile Include="DriveInfo\DriveInfo.cs" />
-    <Compile Include="DriveInfo\DriveType.cs" />
-    <Compile Include="Interactive.cs" />
-    <Compile Include="SpecialFolder.cs" />
-    <Compile Include="Environment.cs" />
+    <Compile Include="Clipboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

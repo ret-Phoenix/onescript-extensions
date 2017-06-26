@@ -18,7 +18,7 @@ namespace drafts
             engine.Initialize();
 
             // Тут можно указать любой класс из компоненты
-            engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(onescript_extensions.Environment)));
+            engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(onescript_extensions.AssemblyReflector.AssemblyReflector)));
 
             var MyRef = new onescript_extensions.AssemblyReflector.AssemblyReflector();
             MyRef.LoadAssembly(ScriptEngine.Machine.ValueFactory.Create(@"c:\work\portable\OneScript\lib\extensions\bin\onescript-extensions.dll"));

@@ -18,7 +18,7 @@
 	Если Файл.Расширение = ".dll" Тогда
 
 		ПутьККомпоненте = СтрШаблон("/%1/releases/download/v%2/%3",
-			"dmpas/oscript-v8unpack",
+			"ret-Phoenix/onescript-extensions",
 			Версия,
 			Файл.Имя);
 

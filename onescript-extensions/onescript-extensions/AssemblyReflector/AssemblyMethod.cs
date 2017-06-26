@@ -1,11 +1,5 @@
 ﻿using ScriptEngine.HostedScript.Library;
-using ScriptEngine.Machine;
 using ScriptEngine.Machine.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace onescript_extensions.AssemblyReflector
 {

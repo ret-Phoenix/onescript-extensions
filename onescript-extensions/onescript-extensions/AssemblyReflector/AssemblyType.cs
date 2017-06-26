@@ -2,10 +2,6 @@
 using ScriptEngine.Machine;
 using ScriptEngine.Machine.Contexts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace onescript_extensions.AssemblyReflector
 {
@@ -108,8 +104,8 @@ namespace onescript_extensions.AssemblyReflector
             return new ArrayImpl();
         }
 
-        [ContextMethod("ПолучитьМетоды")]
-        public ArrayImpl GetMethods()
+        [ContextMethod("ПолучитьМетоды", "GetMethods")]
+        public ArrayImpl GetAsmMethods()
         {
             ArrayImpl result = new ArrayImpl();
             var list = AsmType.GetMethods();
@@ -140,8 +136,8 @@ namespace onescript_extensions.AssemblyReflector
             return result;
         }
 
-        [ContextMethod("ПолучитьСвойства")]
-        public ArrayImpl GetProperties()
+        [ContextMethod("ПолучитьСвойства", "GetProperties")]
+        public ArrayImpl GetAsmProperties()
         {
             ArrayImpl result = new ArrayImpl();
             var list = AsmType.GetProperties();

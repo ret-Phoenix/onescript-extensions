@@ -1,0 +1,43 @@
+version: 1.0.1-{build}
+before_build:
+- ps: nuget restore
+init:
+- ps: Set-WinSystemLocale ru-RU
+- ps: Start-Sleep -s 5
+- ps: Restart-Computer
+install:
+- cmd: >-
+    mkdir engine
+
+    cd engine
+
+    curl -o os.exe http://oscript.io/downloads/latest/exe
+
+    os.exe /silent
+
+    set PATH=%ProgramFiles(x86)%\OneScript\bin;%PATH%
+
+    cd ..
+
+    oscript -version
+
+    opm install opm
+
+build:
+  verbosity: minimal
+
+after_build:
+- cmd: >-
+    copy onescript-extensions\onescript-extensions\bin\Debug\onescript-extensions.dll oslib\bin\
+
+    cd oslib
+
+    opm build .
+
+    cd ..
+
+artifacts:
+- path: oslib\*.ospx
+  name: extensions
+- path: oslib\bin\*.dll
+  name: components

@@ -52,5 +52,14 @@ namespace onescript_extensions
             thread.Join();
         }
 
+        [ContextMethod("Очистить", "Clear")]
+        public void Clear()
+        {
+            Thread thread = new Thread(() => System.Windows.Forms.Clipboard.Clear());
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
+        }
+
     }
 }
